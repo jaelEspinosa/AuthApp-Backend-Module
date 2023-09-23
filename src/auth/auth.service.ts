@@ -80,6 +80,10 @@ async login( loginDto: LoginDto): Promise<LoginResponse>{
       if (!user ){
         throw new UnauthorizedException(' Not valid credentials - email ')
       }
+
+      if (!user.isActive){
+        throw new UnauthorizedException('Unverified account, please check your email')
+      }
       
       if (!bcryptjs.compareSync( password, user.password)){
         throw new UnauthorizedException(' Not valid credentials - password ')
