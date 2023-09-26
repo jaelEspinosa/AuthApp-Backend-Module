@@ -42,7 +42,7 @@ Los endPoints configurados serian los siguientes:
 
 
 
-### Finalmente en nuestra consola ejecutamos el comando ```npm run start:dev```  , ya deberia estar nuestro backend preparado para recibir peticiones
+### Finalmente en nuestra consola ejecutamos el comando ```npm run start:dev```  ,y ya deberia estar nuestro backend preparado para recibir peticiones
 
 
 
