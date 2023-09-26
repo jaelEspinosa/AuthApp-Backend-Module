@@ -1,5 +1,16 @@
 # Backend en Nest
 
+## Funcionalidad:
+
+
+```
+Estamos ante un sistema de autenticación completo, con token, hasheo de contraseñas y envio de email tanto
+de confirmación de email, como para poder resetear el password en caso necesario.
+
+
+```
+## Ejecutar la app en localhost:
+
 ```
 Con docker desktop corriendo ejecutar el comando:
 docker compose up -d
@@ -21,13 +32,18 @@ EMAIL_USER=username@gmail.com
 
 ```
 
+Los endPoints configurados serian los siguientes:
 
-# Funcionalidad:
+- 'http://localhost:3000/auth/login' --> De tipo ```Post``` en el body mandamos un objeto con el email y password
+- 'http://localhost:3000/auth/register' --> De tipo ```Post``` en el body mandamos un objeto con el name, email y password
+- 'http://localhost:3000/auth/verify' --> De tipo ```Put``` en el body mandamos un objeto con el token de un solo uso.
+- 'http://localhost:3000/auth/forgotPassword' --> De tipo ```Put``` en el body mandamos un objeto con el email
+- 'http://localhost:3000/auth/reset-password' --> De tipo ```Put``` en el body mandamos un objeto con el email y el token de un solo uso.
 
 
-```
-Estamos ante un sistema de autenticación completo, con token, hasheo de contraseñas y envio de email tanto
-de confirmación de email, como para poder resetear el password en caso necesario.
+
+### Finalmente en nuestra consola ejecutamos el comando ```npm run start:dev```  , ya deberia estar nuestro backend preparado para recibir peticiones
 
 
-```
+
+
