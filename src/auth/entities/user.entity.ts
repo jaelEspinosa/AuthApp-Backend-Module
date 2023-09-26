@@ -1,4 +1,7 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { generateTokenOneUse } from "../helpers/generateToken";
+
+
 
 
 @Schema()
@@ -20,7 +23,12 @@ export class User {
 
    @Prop({type: [String], default: 'user' }) // ['user', 'admin', 'regular']
    roles: string[];
+   
+   @Prop({ default: generateTokenOneUse() })
+   tokenOneUse: string
 
 }
+
+
 
 export const UserSchema = SchemaFactory.createForClass( User )

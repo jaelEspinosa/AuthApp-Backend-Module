@@ -5,10 +5,12 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { User, UserSchema } from './entities/user.entity';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule } from '@nestjs/config';
+import { EmailService } from './services/email.service';
+
 
 @Module({
   controllers: [AuthController],
-  providers: [AuthService],
+  providers: [AuthService, EmailService ],
   imports:[
     ConfigModule.forRoot(),
     MongooseModule.forFeature([
