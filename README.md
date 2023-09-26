@@ -38,7 +38,7 @@ Los endPoints configurados serian los siguientes:
 - 'http://localhost:3000/auth/register' --> De tipo ```Post``` en el body mandamos un objeto con el name, email y password
 - 'http://localhost:3000/auth/verify' --> De tipo ```Put``` en el body mandamos un objeto con el token de un solo uso.
 - 'http://localhost:3000/auth/forgotPassword' --> De tipo ```Put``` en el body mandamos un objeto con el email
-- 'http://localhost:3000/auth/reset-password' --> De tipo ```Put``` en el body mandamos un objeto con el email y el token de un solo uso.
+- 'http://localhost:3000/auth/reset-password' --> De tipo ```Put``` en el body mandamos un objeto con el nuevo password y el token de un solo uso.
 - 'http://localhost:3000/auth/check-token' --> De tipo ```Get``` en las headers enviamos el token con el formato Bearer Token, este último endpoint nos sirve
     para comprobar si el usuario esta autenticado.
 
