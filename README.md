@@ -9,7 +9,7 @@ Copiar el ```.env.template``` y renombrarlo a ```.env```
 
 
 ```
-La variables de entorno hay que sustituirlas por las que procedan, sobre todo las de la cuenta de correo,
+Las variables de entorno hay que sustituirlas por las que procedan, sobre todo las de la cuenta de correo,
 para que el backend pueda enviar los correos de verificación de cuenta y reset de contraseña.
 
 ejemplo:
