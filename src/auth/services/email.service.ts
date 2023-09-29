@@ -51,7 +51,7 @@ export class EmailService {
             html: `
                <p> Hola ${user.name}, </p>
                <p> Haz click en el siguiente enlace para restablecer tu contraseña</p>
-               <a href='${process.env.FRONTEND_URL}/auth/reset-password/${user.tokenOneUse}'><h4>Verificar</h4></a>
+               <a href='${process.env.FRONTEND_URL}/auth/reset-password/${user.tokenOneUse}'><h4>Resetear Contraseña</h4></a>
                <p>Si tu no has solicitado este correo, puedes ignorarlo</p>
             `,
         };
