@@ -4,6 +4,7 @@
 
 mongo/
 .env
+.yml
 
 # Logs
 logs
