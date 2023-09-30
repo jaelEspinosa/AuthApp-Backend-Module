@@ -80,7 +80,7 @@ async verify ( verifyUserDto: VerifyUserDto ) {
             }
         }else{
       // No se encontró el usuario
-        throw new BadRequestException('Error not found this user')
+        throw new BadRequestException('Enlace de validacion inválido')
       }
 
 }
@@ -120,7 +120,7 @@ async resetPassword ( resetPasswordDto: ResetPasswordDto ){
       
         // si no se encuentra se envia error
         if(!user){
-              throw new BadRequestException('Usuario no válido')
+              throw new BadRequestException('Enlace de validación no válido')
         }
       
         //modificamos el password y guardamos en db
